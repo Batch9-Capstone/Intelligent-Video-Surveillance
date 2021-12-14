@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>Capstone Project</title>
+
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/bootstrap.min.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/font-awesome.css')}}">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/templatemo-softy-pinko.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/homemade.css')}}">
+</head>
+
+<body>
+    <div id="loading"></div>
+    <div id="content">
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="{{url_for("index")}}" class="logo">
+                            <img src="{{url_for('static',filename='assets/images/logo_pes.png')}}" alt="Softy Pinko" />
+                        </a>
+                        <ul class="nav">
+                            <li><a href="{{url_for("index")}}" class="active">Home</a></li>
+                            <li><a href="{{url_for("index",_anchor='features')}}">About</a></li>
+                            <li><a href="{{url_for("ContactUs")}}">Contact Us</a></li>
+                            <li><a href="{{url_for("login")}}">Logout</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="mini" id="work-process">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="info">
+                            <h1>Health Hazard Detection</h1>
+                            <p>This features will detect if someone faints or a major health risk takes place like
+                                cardiac arrest.</p>
+                            <!-- <iframe id="myFrame" class="myFrame" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+
+                            <div class="vidlink"><input type="text" id="videoUrl" placeholder="Enter URL here">
+                            </div> -->
+                            <!-- <button class="main-button" onclick="showVideo()">Get Video</button> -->
+                            <button class="main-button" value=" Run Script " onclick="loading();MyFunction1();">Start Surveillance</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">Copyright &copy; 2020 </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+    <script>
+        function MyFunction1() {
+            window.location.href = "http://127.0.0.1:5000/DetectFall";
+        }
+        </script>
+
+    <script src="{{url_for('static',filename='assets/js/jquery-2.1.0.min.js')}}"></script>
+
+    <script src="{{url_for('static',filename='assets/js/popper.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/bootstrap.min.js')}}"></script>
+
+    <script src="{{url_for('static',filename='assets/js/scrollreveal.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='assets/js/imgfix.min.js')}}"></script>
+
+    <script src="{{url_for('static',filename='assets/js/custom.js')}}"></script>
+
+    <script src="{{url_for('static',filename='assets/js/homemade.js')}}" type="text/javascript"></script>
+</body>
+
+</html>
