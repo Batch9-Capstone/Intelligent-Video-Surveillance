@@ -13,10 +13,10 @@ app.config["SESSION_TYPE"] = "filesystem"
 app.secret_key = 'abcdef'
 
 # Configs for MYSQLdb login
-app.config['MYSQL_USER'] = 'sql6458642'
-app.config['MYSQL_PASSWORD'] = 'fpla5W97zw'
-app.config['MYSQL_HOST'] = 'sql6.freemysqlhosting.net'
-app.config['MYSQL_DB'] = 'sql6458642'
+app.config['MYSQL_USER'] = '' # add sql db credentials here
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_HOST'] = ''
+app.config['MYSQL_DB'] = ''
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
@@ -25,11 +25,11 @@ mysql = MySQL(app)
 def mailer(anamoly):
     mail = Mail(app) 
 
-    # configuration of mail
+    # configuration of mail, add account details here
     app.config['MAIL_SERVER']='smtp.gmail.com'
     app.config['MAIL_PORT'] = 465
-    app.config['MAIL_USERNAME'] = 'capstone.ivs@gmail.com'
-    app.config['MAIL_PASSWORD'] = 'capstone123'
+    app.config['MAIL_USERNAME'] = '' # add sender email here
+    app.config['MAIL_PASSWORD'] = '' # add sender pass here
     app.config['MAIL_USE_TLS'] = False
     app.config['MAIL_USE_SSL'] = True
 
@@ -37,8 +37,8 @@ def mailer(anamoly):
     # message object mapped to a particular URL ‘/’
     msg = Message(
                 'ALERT',
-                sender ="capstone.ivs@gmail.com",
-                recipients = ["shivamrawat2000@gmail.com"]
+                sender ="", # insert sender (dummy) email here
+                recipients = [""] #insert receipient mail here
                 )
     msg.body = anamoly;
     mail.send(msg)
